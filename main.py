@@ -8,10 +8,10 @@ print("Hi")
 Checklist:
 """
 
-ChecklistEntries = ["Pygame_window"]
+Pygame_window = False
+ChecklistEntries = [Pygame_window]
 CompletedEntries = []
 UncompletedEntries = []
-Pygame_window = False
 
 
 def Checklist():
