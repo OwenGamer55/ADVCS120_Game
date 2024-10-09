@@ -2,13 +2,13 @@ import pygame
 import sys
 import time
 
-print("Hi")
-
 """
 Checklist:
+Pygame_window
 """
 
 Pygame_window = False
+
 ChecklistEntries = [Pygame_window]
 CompletedEntries = []
 UncompletedEntries = []
