@@ -9,7 +9,7 @@ Pygame_window
 
 Pygame_window = False
 
-ChecklistEntries = [Pygame_window]
+ChecklistEntries = {Pygame_window:"Pygame Window"}
 CompletedEntries = []
 UncompletedEntries = []
 
