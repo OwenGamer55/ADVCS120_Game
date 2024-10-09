@@ -1,5 +1,3 @@
-import subprocess
-subprocess.call("pipInstall.sh")
 import pygame
 import sys
 import time
