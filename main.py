@@ -1,5 +1,6 @@
 import os
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
+os.environ['SDL_AUDIODRIVER'] = 'pulse'
 import pygame
 import sys
 import time
@@ -56,3 +57,29 @@ def Checklist():
       + (" • " + "\n • ".join(CompletedEntries) if CompletedEntries else "\033[1mNONE\033[0m"))
 
 Checklist()
+
+
+
+
+
+
+
+
+
+### PYGAME ###
+pygame.init()
+
+window_size = (800, 600)
+window = pygame.display.set_mode(window_size)
+pygame.display.set_caption("My Pygame Window")
+
+running = True
+while running:
+   # Handle events
+   for event in pygame.event.get():
+      if event.type == pygame.QUIT:
+         running = False
+    
+   pygame.display.flip()
+pygame.quit()
+### PYGAME ###
