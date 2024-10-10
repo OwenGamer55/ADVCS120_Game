@@ -1,25 +1,30 @@
+import os
+os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 import pygame
 import sys
 import time
 
-"""
-Checklist:
-Pygame_window
-"""
+### CHECKLIST ### 
+ChecklistValues = {
 
-Pygame_window = False
+    "Pygame Window":False,
+    "Player Sprite":False
+    
+}
+### CHECKLIST ###
 
-ChecklistEntries = {Pygame_window:"Pygame Window"}
 CompletedEntries = []
 UncompletedEntries = []
 
-
 def Checklist():
-    for entry in ChecklistEntries:
-        if entry:
+    for entry, status in ChecklistValues.items():
+        if status:
             CompletedEntries.append(entry)
-        elif not entry:
+        elif not status:
             UncompletedEntries.append(entry)
-    print(UncompletedEntries)
+    print("\033[1;31mUncompleted Tasks:\033[37;0m\n" 
+      + (" • " + "\n • ".join(UncompletedEntries) if UncompletedEntries else "None")
+      + "\n\n\033[1;32mCompleted Tasks:\033[37;0m\n" 
+      + (" • " + "\n • ".join(CompletedEntries) if CompletedEntries else "\033[1mNONE\033[0m"))
 
 Checklist()
