@@ -6,11 +6,8 @@ import time
 
 ### CHECKLIST ### 
 ChecklistValues = {
-
     "Pygame Window":False,
-    "Player Sprite":False
-    
-}
+    "Player Sprite":False}
 ### CHECKLIST ###
 
 CompletedEntries = []
